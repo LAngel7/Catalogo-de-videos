@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Videos</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        .background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; background-color: rgba(255, 255, 255, 0.8); position: relative; z-index: 1; }
+        h1 { text-align: center; color: #333; margin-bottom: 20px; }
+        .video-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .video-item { background-color: #fff; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; width: calc(33.333% - 20px); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .video-item img { width: 100%; height: auto; }
+        .video-item h3 { padding: 10px; text-align: center; font-size: 1.2em; }
+        .video-item p { padding: 0 10px 10px; text-align: center; }
+        @media (max-width: 768px) {
+            .video-item { width: calc(50% - 20px); }
+        }
+        @media (max-width: 480px) {
+            .video-item { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="fondov.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <div class="container">
+        <h1>Catálogo de Videos</h1>
+        <div class="video-grid">
+            <div class="video-item" style="background-color: rgba(0, 0, 0, 0);"><center>
+                <h3>PIORES e MELHORES desenhos do OSCAR 2023</h3>
+                <video style="background-size: cover;" width="352" height="220" controls>
+                <source src="video1.mp4" type="video/mp4">
+            </center></div>
+            <div class="video-item" style="background-color: rgba(0, 0, 0, 0);"><center>
+                <h3>Tudo sobre o OSCAR DE ANIMAÇÃO 2023 📽️ comentando todos os indicados!</h3>
+                <video style="background-size: cover;" width="352" height="220" controls>
+                <source src="video2.mp4" type="video/mp4">
+                </center></div>
+                <div class="video-item" style="background-color: rgba(0, 0, 0, 0);"><center>
+                    <h3>Recebi a Lista dos VÍDEOS MAIS VISTOS dos Youtubers</h3>
+                    <video style="background-size: cover;" width="352" height="220" controls>
+                    <source src="video3.mp4" type="video/mp4">
+                </center></div>
+        </div>
+    </div>
+</body>
+</html>

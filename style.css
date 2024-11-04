@@ -1,0 +1,22 @@
+body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; background-color: rgba(255, 255, 255, 0.8); position: relative; z-index: 1; }
+h1 { text-align: center; color: #333; margin-bottom: 20px; }
+.video-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.video-item { background-color: #fff; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; width: calc(33.333% - 20px); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+.video-item img { width: 100%; height: auto; }
+.video-item h3 { padding: 10px; text-align: center; font-size: 1.2em; }
+.video-item p { padding: 0 10px 10px; text-align: center; }
+@media (max-width: 768px) {
+    .video-item { width: calc(50% - 20px); }
+}
+@media (max-width: 480px) {
+    .video-item { width: 100%; }
+}
